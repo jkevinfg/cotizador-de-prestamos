@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Result from "./components/Result";
 import Message from  "./components/Message";
+import Spinner from "./components/Spinner";
+
 
 function App() {
 
@@ -11,11 +13,13 @@ function App() {
     const [cantidad,guardarCantidad] = useState(0);
     const [plazo, guardarPlazo] = useState('');
     const [tasa , guardarTasa] = useState('')
-
+    const [cargando , guardarCargando] =  useState(false);
 
     let component;
 
-    if (monto === 0 ){
+    if (cargando){
+        component = <Spinner />;
+    } else if (monto === 0 ){
         component = <Message error = {error}/>;
     } else if  ( isNaN(cantidad) || isNaN(plazo) | isNaN(tasa)) {
         guardarMonto(0)
@@ -38,6 +42,7 @@ function App() {
                           tasa={tasa} guardarTasa={guardarTasa}
                           monto = {monto} guardarMonto={guardarMonto}
                           error = {error} cambiarError = {cambiarError}
+                          guardarCargando = {guardarCargando}
                       />
                   </div>
                   <div className="col-6 align-self-center">

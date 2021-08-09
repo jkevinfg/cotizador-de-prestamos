@@ -7,6 +7,7 @@ const Form = (props) => {
             tasa,guardarTasa,
              guardarMonto,
             cambiarError,
+            guardarCargando
             } = props;
 
     const cambiarCantidad = (event) => {
@@ -31,12 +32,13 @@ const Form = (props) => {
         //eliminar el error previo
         cambiarError(false);
 
-
-        const monto = calcularMonto(cantidad,plazo,tasa);
-        guardarMonto(monto);
-
-
-
+        guardarCargando(true);
+        setTimeout(() => {
+            const monto = calcularMonto(cantidad,plazo,tasa);
+            guardarMonto(monto);
+            //desactivar loading
+            guardarCargando(false)
+        } , 2000)
     };
 
     return(

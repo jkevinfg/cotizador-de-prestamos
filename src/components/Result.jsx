@@ -8,6 +8,7 @@ const Result = (props) => {
                 <p> Cantidad : {cantidad} soles</p>
                 <p> Tasa : {tasa } %</p>
                 <p> Plazo a pagar : {plazo } meses</p>
+                <p>Pago mensual : { (monto/plazo).toFixed(2)} soles </p>
                 <p>Pago total : {monto} soles</p>
             </div>
     )
