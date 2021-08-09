@@ -15,19 +15,37 @@ h1 {
 
 .container {
   background-color : white;
-  padding: 1rem;
+  padding: 3rem;
   border-radius: 1rem;
   margin-top: 2rem;
-  height: 80vh;
 }
 
-form {
-  padding : 3rem;
-  max-width : 600px;
-  margin: 0 auto;
-
-}
 
 form label {
-  font-size : 2rem;
+  font-size : 1.5rem;
+  font-weight : bold;
+}
+
+input[type="submit"] {
+  font-weight : bold;
+  font-size: 1.2rem;
+}
+
+.error {
+  color:red;
+  text-align: center;
+  font-size : 1.2rem;
+}
+
+.result {
+  border: 1px solid red;
+  padding: 1.5rem;
+}
+.result p {
+  font-size : 1.2rem;
+}
+
+.message {
+  text-align: center;
+  font-size : 1.2rem;
 }
