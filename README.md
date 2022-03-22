@@ -1,6 +1,6 @@
 # Cotizador de prestamos ReactJS
 
-https://gifted-carson-03cd85.netlify.app/ -> Link 
+https://inquisitive-rabanadas-15f9a3.netlify.app/ -> Link 
 
 
 <p align="center">
