@@ -32,7 +32,7 @@ function App() {
 
     return (
       <Fragment>
-          <Header titulo="Cotizador de Prestamos"/>
+          <Header titulo="Presta APP - Cotizador de prestamos"/>
           <div className="container">
               <div className="row">
                   <div className="col-6">
